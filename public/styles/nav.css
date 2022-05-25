@@ -1,0 +1,36 @@
+nav {
+  background-color: #4056A1;
+  height:120px;
+  color:#FFFFFF;
+  overflow: hidden;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;  
+  width:100%;
+  z-index: 1;
+}
+nav > span {
+  display: flex;
+  margin-left: 1.5em;
+  font-family: 'Bungee', cursive;
+  font-size: 30px;
+  margin-bottom: 7px;
+  flex-direction: column-reverse;
+}
+
+.icon {
+  font-size:22px;
+  color: red;
+
+}
+.new {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  font-size:22px;
+  align-items: center;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  flex-direction: column;
+  align-self: flex-end;
+}

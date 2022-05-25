@@ -9,21 +9,69 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div class="new">
+      <span><b>Write </b> &nbsp;a new tweet</span>
+      <span class="icon"><i class="fa-solid fa-angles-down"></i></span>
+    </div>
     </nav>
+    <header class="avtar">
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div>
+          <h2 class="name">Your Name</h2>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <form method="POST" action ="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          
+          <div class="tweet-area">
+            <textarea class="text" name="text" id="tweet-text"></textarea>
+            <hr class="line">
+            <div class="submit"> 
+            <button type="submit">Tweet</button>
+            <output name="counter" id="count" class="counter" for="tweet-text">140</output></div>
+
+          </div>
+        </form>
+      </section>
+      
+      <article><header class="user"><i class="fa-solid fa-skull"></i> &nbsp;&nbsp;Newton</header>
+        <form>
+          <textarea class="article-tweet" name="text"></textarea>
+
+        </form>
+        <hr class="article-line">
+      <footer><div>10 days ago</div>
+        <div>
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+    </footer></article>
+    </main>
   </body>
 </html>

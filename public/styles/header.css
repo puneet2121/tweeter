@@ -1,0 +1,16 @@
+header.avtar {
+  background-color: #f0830e;
+  display: flex;
+  justify-content: flex-start;
+  height:400px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 120px;
+}
+.name {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
