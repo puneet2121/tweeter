@@ -28,7 +28,8 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function() {
   $.get('/tweets',(res) => {
-    for(let items of res) {
+    $('#tweets-container').html('');
+    for(let items of res.reverse()) {
       createTweetElement(items);
     }
 })
@@ -37,11 +38,23 @@ const renderTweets = function() {
 $(() =>  {
 renderTweets();
 $("form").submit(function(event) {
+  console.log(event);
+  if ($.trim($("#tweet-text").val()) === '') {
+    event.preventDefault();
+    return alert('you did not fill out one of the fields');
+    
+}
+  if ($.trim($("#tweet-text").val()).length > 140) {
+    event.preventDefault();
+    return alert('too much word');
+  }
   event.preventDefault();
-  let serializeData = $( this ).serialize() 
+  let serializeData = $( this ).serialize()
   $.post('/tweets',serializeData,() => {
+    renderTweets();
     console.log('Data transfered')
   });
+ 
 })
 });
 
