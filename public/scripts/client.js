@@ -63,7 +63,7 @@ $(() =>  {
     $.post('/tweets',serializeData,() => {
       renderTweets();
       console.log('Data transfered');
-      $("#tweet-text").val('')
+      $("#tweet-text").val('');
       $('#count').text(140);
     });
  
