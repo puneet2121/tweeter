@@ -28,7 +28,6 @@ const createTweetElement = function(tweet) {
   </article>`;
   $('#tweets-container').append(tweetHtml);
 };
- 
 
 const renderTweets = function() {
   $.get('/tweets',(res) => {
@@ -42,10 +41,11 @@ const renderTweets = function() {
 $(() =>  {
   $('#error').hide();
   renderTweets();
+  
   $("form").submit(function(event) {
     console.log(event);
-  
     if ($.trim($("#tweet-text").val()).length === 0) {
+     
       $('#message').html('<i class="fa-solid fa-triangle-exclamation"></i> Sorry please write down something<i class="fa-solid fa-triangle-exclamation"></i>');
       $('#error').show();
       event.preventDefault();
@@ -57,12 +57,14 @@ $(() =>  {
       event.preventDefault();
       return false;
     }
-  
+    
     event.preventDefault();
     let serializeData = $(this).serialize();
     $.post('/tweets',serializeData,() => {
       renderTweets();
       console.log('Data transfered');
+      $("#tweet-text").val('')
+      $('#count').text(140);
     });
  
   });
