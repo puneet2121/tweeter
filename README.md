@@ -23,6 +23,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![screenshot of tweeter desktop version] 
-![screenshot of tweeter tablet version] 
-![screenshot of tweeter Mobile version] 
+![screenshot of tweeter desktop version] (https://github.com/puneet2121/tweeter/blob/bf48cdbad8f16b48c07541b703b2397c8b542828/docs/Screen%20Shot%202022-05-27%20at%201.32.00%20AM.png)
+![screenshot of tweeter tablet version] (https://github.com/puneet2121/tweeter/blob/bf48cdbad8f16b48c07541b703b2397c8b542828/docs/Screen%20Shot%202022-05-27%20at%203.02.00%20PM.png)
+![screenshot of tweeter Mobile version] (https://github.com/puneet2121/tweeter/blob/bf48cdbad8f16b48c07541b703b2397c8b542828/docs/Screen%20Shot%202022-05-27%20at%203.01.39%20PM.png)
