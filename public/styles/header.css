@@ -1,5 +1,5 @@
 header.avtar {
-  background-color: #f0830e;
+  background-color: #f2a655;
   display: flex;
   justify-content: flex-start;
   height:400px;
@@ -8,9 +8,43 @@ header.avtar {
   flex-direction: column;
   align-content: center;
   margin-top: 120px;
+  margin-bottom: 40px;
 }
 .name {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+}
+img{
+  margin-top: 30px;
+  height: 23vh;
+}
+@media only screen and (min-width: 1024px) {
+  .application {
+    display: flex;
+    margin: 65px 0;
+  }
+  header.avtar {
+    width: 53%;
+    height:30%;
+    margin:100px 30px;
+    border-radius: 15px;
+    margin-right:100px;
+  } 
+}
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  
+  
+  img{
+    height: 11vh;
+  }
+  .name{
+    font-size:1.1rem;
+  }
+  header.avtar { 
+    margin-top: 35px;
+    height: 20vh;
+   
+  } 
+
 }

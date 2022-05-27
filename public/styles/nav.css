@@ -34,3 +34,27 @@ nav > span {
   flex-direction: column;
   align-self: flex-end;
 }
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    height:65px;
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  nav {
+    height:65px;
+   }
+   .new {
+    display: flex;
+    font-size:1rem;
+    align-items: center;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  nav >span {
+    font-size:1rem;
+  }
+  .icon {
+    font-size: 1rem;
+}
+}

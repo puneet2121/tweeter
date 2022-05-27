@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -34,9 +35,10 @@
       <span class="icon"><i class="fa-solid fa-angles-down"></i></span>
     </div>
     </nav>
+    <div class ="application">
     <header class="avtar">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/avatar.png"> 
       </div>
       <div>
           <h2 class="name">Your Name</h2>
@@ -47,8 +49,10 @@
     <main class="container">
       <section class="new-tweet">
         <form method="POST" action ="/tweets">
+          <article id="error">
+            <output id="message"></output> 
+            </article>
           <label for="tweet-text">What are you humming about?</label>
-          
           <div class="tweet-area">
             <textarea class="text" name="text" id="tweet-text"></textarea>
             <hr class="line">
@@ -59,12 +63,9 @@
           </div>
         </form>
       </section>
-      
-
         <div id="tweets-container">
-          
         </div>
-
+      </div>
     </main>
   </body>
 </html>
